@@ -16,7 +16,9 @@ https://github.com/react-native-community/react-native-geolocation
 
 ios
 
-```info.plist
+info.plist
+
+```
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
 	<string></string>
 	<key>NSLocationAlwaysUsageDescription</key>
@@ -25,13 +27,17 @@ ios
 	<string></string>
 ```
 
-```xcode > signing&Capabilities > Background Modes
+xcode > signing&Capabilities > Background Modes
+
+```
 check Location updates
 ```
 
 android
 
-```android/app/src/main/AndroidManifest.xml
+android/app/src/main/AndroidManifest.xml
+
+```
   <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 ```
 
@@ -43,7 +49,9 @@ https://github.com/react-native-community/react-native-maps
 
 android
 
-```android/app/src/main/AndroidManifest.xml
+android/app/src/main/AndroidManifest.xml
+
+```
   <application>
    <!-- You will only need to add this meta-data tag, but make sure it's a child of application -->
    <meta-data
@@ -62,16 +70,16 @@ android
 https://reactnavigation.org/
 
 ```zsh
-yarn add react-native-reanimated react-native-gesture-handler react-native-screens react-native-safe-area-context @react-native-community/masked-view
+	yarn add react-native-reanimated react-native-gesture-handler react-native-screens react-native-safe-area-context @react-native-community/masked-view
 
-#stack
-yarn add @react-navigation/stack
+	#stack
+	yarn add @react-navigation/stack
 
-# bottom-drawer
-yarn add @react-navigation/drawer
+	# bottom-drawer
+	yarn add @react-navigation/drawer
 
-# bottom-tabs
-yarn add @react-navigation/bottom-tabs
+	# bottom-tabs
+	yarn add @react-navigation/bottom-tabs
 ```
 
 ## Styling
@@ -90,7 +98,9 @@ https://github.com/oblador/react-native-vector-icons
 
 ios
 
-```info.plist
+info.plist
+
+```
   <key>UIAppFonts</key>
 	<array>
 		<string>AntDesign.ttf</string>
@@ -113,6 +123,8 @@ ios
 
 android
 
-```android/app/build.gradle
+android/app/build.gradle
+
+```
   apply from: "../../node_modules/react-native-vector-icons/fonts.gradle"
 ```
