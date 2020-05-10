@@ -12,6 +12,7 @@ const Page: React.FC = () => {
   return (
     <SafeAreaView>
       <View>
+        <Button title="deviceInfo" onPress={navi('DeviceInfo')} />
         <Button title="webview" onPress={navi('Webview')} />
         <Button title="Map" onPress={navi('Map')} />
       </View>

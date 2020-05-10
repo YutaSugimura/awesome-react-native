@@ -1,3 +1,9 @@
+## デバイス情報
+
+#### react-native-device-info
+
+https://github.com/react-native-community/react-native-device-info
+
 ## Webview
 
 ### ブラウザー
