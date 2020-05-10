@@ -2,6 +2,7 @@ import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 import Home from '../pages/home';
 import DeviceInfo from '../pages/deviceInfo';
+import Hooks from '../pages/hooks';
 import Webview from '../pages/webview';
 import Maps from '../pages/map';
 
@@ -12,6 +13,7 @@ const Router: React.SFC = () => {
     <Stack.Navigator initialRouteName="Home">
       <Stack.Screen name="Home" component={Home} />
       <Stack.Screen name="DeviceInfo" component={DeviceInfo} />
+      <Stack.Screen name="Hooks" component={Hooks} />
       <Stack.Screen name="Webview" component={Webview} />
       <Stack.Screen name="Map" component={Maps} />
     </Stack.Navigator>
