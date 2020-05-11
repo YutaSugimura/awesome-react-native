@@ -14,6 +14,7 @@ const Page: React.FC = () => {
       <View>
         <Button title="deviceInfo" onPress={navi('DeviceInfo')} />
         <Button title="hooks" onPress={navi('Hooks')} />
+        <Button title="Storage" onPress={navi('Storage')} />
         <Button title="webview" onPress={navi('Webview')} />
         <Button title="Map" onPress={navi('Map')} />
         <Button title="Voice" onPress={navi('Voice')} />

@@ -10,6 +10,12 @@ https://github.com/react-native-community/react-native-device-info
 
 https://github.com/react-native-community/hooks
 
+## Storage
+
+#### react-native-community/async-storage
+
+https://github.com/react-native-community/async-storage
+
 ## Webview
 
 ### ブラウザー
