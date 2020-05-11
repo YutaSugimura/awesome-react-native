@@ -46,9 +46,11 @@
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string></string>
 	<key>NSMicrophoneUsageDescription</key>
-	<string>Need microphone access for recording awesomes</string>
+	<string>Description of why you require the use of the microphone</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>Select pictures for certain activities</string>
+	<key>NSSpeechRecognitionUsageDescription</key>
+	<string>Description of why you require the use of the speech recognition</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>AntDesign.ttf</string>

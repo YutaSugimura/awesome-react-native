@@ -16,6 +16,7 @@ const Page: React.FC = () => {
         <Button title="hooks" onPress={navi('Hooks')} />
         <Button title="webview" onPress={navi('Webview')} />
         <Button title="Map" onPress={navi('Map')} />
+        <Button title="Voice" onPress={navi('Voice')} />
       </View>
     </SafeAreaView>
   );
