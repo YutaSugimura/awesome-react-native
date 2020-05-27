@@ -19,6 +19,7 @@ const Page: React.FC = () => {
         <Button title="Map" onPress={navi('Map')} />
         <Button title="Voice" onPress={navi('Voice')} />
         <Button title="CustomHooks" onPress={navi('CustomHooks')} />
+        <Button title="Animation" onPress={navi('Animation')} />
       </View>
     </SafeAreaView>
   );

@@ -8,6 +8,7 @@ import Webview from '../pages/webview';
 import Maps from '../pages/map';
 import Voice from '../pages/voice';
 import CustomHooks from '../pages/customHooks';
+import AnimationStack from '../navigation/animation';
 
 const Stack = createStackNavigator();
 
@@ -22,6 +23,7 @@ const Router: React.SFC = () => {
       <Stack.Screen name="Map" component={Maps} />
       <Stack.Screen name="Voice" component={Voice} />
       <Stack.Screen name="CustomHooks" component={CustomHooks} />
+      <Stack.Screen name="Animation" component={AnimationStack} />
     </Stack.Navigator>
   );
 };
