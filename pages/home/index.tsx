@@ -20,6 +20,7 @@ const Page: React.FC = () => {
         <Button title="Voice" onPress={navi('Voice')} />
         <Button title="CustomHooks" onPress={navi('CustomHooks')} />
         <Button title="Animation" onPress={navi('Animation')} />
+        <Button title="Storybook" onPress={navi('Storybook')} />
       </View>
     </SafeAreaView>
   );

@@ -9,6 +9,7 @@ import Maps from '../pages/map';
 import Voice from '../pages/voice';
 import CustomHooks from '../pages/customHooks';
 import AnimationStack from '../navigation/animation';
+import Storybook from '../pages/storybook';
 
 const Stack = createStackNavigator();
 
@@ -24,6 +25,7 @@ const Router: React.SFC = () => {
       <Stack.Screen name="Voice" component={Voice} />
       <Stack.Screen name="CustomHooks" component={CustomHooks} />
       <Stack.Screen name="Animation" component={AnimationStack} />
+      <Stack.Screen name="Storybook" component={Storybook} />
     </Stack.Navigator>
   );
 };
