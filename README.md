@@ -108,6 +108,10 @@ https://reactnavigation.org/
 
 https://react-native-elements.github.io/react-native-elements/
 
+#### react-native-side-menu
+
+https://github.com/react-native-community/react-native-side-menu
+
 ### Icon
 
 #### react-native-vector-icons

@@ -1,27 +1,45 @@
-import React from 'react';
-import { SafeAreaView, View, Button } from 'react-native';
+import React, { useState } from 'react';
+import { SafeAreaView, View, Button, Text, StyleSheet } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
+import SideMenu from 'react-native-side-menu';
+import Menu from './menu';
+
+const styles = StyleSheet.create({
+  safeArea: {
+    flex: 1,
+  },
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#F5FCFF',
+  },
+});
 
 const Page: React.FC = () => {
   const navigation = useNavigation();
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+
+  const toggle = (): void => {
+    setIsOpen(!isOpen);
+  };
 
   const navi = (pageName: string) => (): void => {
     navigation.navigate(pageName);
+    toggle();
   };
 
+  const menu = <Menu navi={navi} />;
+
   return (
-    <SafeAreaView>
-      <View>
-        <Button title="deviceInfo" onPress={navi('DeviceInfo')} />
-        <Button title="hooks" onPress={navi('Hooks')} />
-        <Button title="Storage" onPress={navi('Storage')} />
-        <Button title="webview" onPress={navi('Webview')} />
-        <Button title="Map" onPress={navi('Map')} />
-        <Button title="Voice" onPress={navi('Voice')} />
-        <Button title="CustomHooks" onPress={navi('CustomHooks')} />
-        <Button title="Animation" onPress={navi('Animation')} />
-        <Button title="Storybook" onPress={navi('Storybook')} />
-      </View>
+    <SafeAreaView style={styles.safeArea}>
+      <SideMenu menu={menu} isOpen={isOpen} onChange={setIsOpen}>
+        <View style={styles.container}>
+          <Text>Welcome to Awesome React Native</Text>
+          <Text>Click to open the menu</Text>
+          <Button title="Open" onPress={toggle} />
+        </View>
+      </SideMenu>
     </SafeAreaView>
   );
 };
