@@ -48,7 +48,7 @@
 
 xcode > signing&Capabilities > Background Modes
 
-- [x]Location updates
+- [x] Location updates
 
 #### android
 
@@ -137,6 +137,12 @@ xcode > signing&Capabilities > Background Modes
   apply from: "../../node_modules/react-native-vector-icons/fonts.gradle"
 ```
 
+## Developer tools
+
 ### Storybook
 
 - [storybook](https://storybook.js.org/docs/guides/guide-react-native/)
+
+### Development
+
+- [flipper](https://github.com/facebook/flipper)
