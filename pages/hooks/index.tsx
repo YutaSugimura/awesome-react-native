@@ -1,7 +1,7 @@
-import React, { useContext, useState } from 'react';
+import React, { useState } from 'react';
 import { SafeAreaView, Text, StyleSheet, Button, TextInput } from 'react-native';
 import { useAppState, useClipboard, useKeyboard } from '@react-native-community/hooks';
-import { ThemeContext } from '../../utils/Appearance';
+import { useAppearance } from '../../context/Appearance';
 
 const styles = StyleSheet.create({
   container: {
@@ -24,7 +24,7 @@ const styles = StyleSheet.create({
 });
 
 const Page: React.FC = () => {
-  const appearance = useContext(ThemeContext);
+  const appearance = useAppearance();
   const currentAppState = useAppState();
   const [data, setString] = useClipboard();
   const keyboard = useKeyboard();

@@ -1,5 +1,5 @@
-# Created with the article in mind
+# Page transitions with animation
 
 ## Reference
 
-- [https://dev.to/ksushiva/rn-screen-transition-create-a-button-that-transforms-into-a-screen-5do2](RN Screen Transition: create a button that transforms into a screen)
+- [RN Screen Transition: create a button that transforms into a screen](https://dev.to/ksushiva/rn-screen-transition-create-a-button-that-transforms-into-a-screen-5do2)

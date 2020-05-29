@@ -1,7 +1,7 @@
 import React from 'react';
 import { useColorScheme } from 'react-native';
 import { NavigationContainer, DarkTheme, DefaultTheme } from '@react-navigation/native';
-import AppearanceProvider from './utils/Appearance';
+import AppearanceProvider from './context/Appearance';
 import Router from './navigation';
 
 const App: React.FC = () => {

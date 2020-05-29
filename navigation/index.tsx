@@ -8,25 +8,50 @@ import Webview from '../pages/webview';
 import Maps from '../pages/map';
 import Voice from '../pages/voice';
 import CustomHooks from '../pages/customHooks';
-import AnimationStack from '../navigation/animation';
+import AnimationStack, { AnimationStackParamList } from '../navigation/animation';
 import Storybook from '../pages/storybook';
 
-const Stack = createStackNavigator();
+export type ParamName =
+  | 'Home'
+  | 'DeviceInfo'
+  | 'Hooks'
+  | 'Storage'
+  | 'Webview'
+  | 'Map'
+  | 'Voice'
+  | 'CustomHooks'
+  | 'Animation'
+  | 'Storybook';
+
+export type RootStackParamList = {
+  Home: undefined;
+  DeviceInfo: undefined;
+  Hooks: undefined;
+  Storage: undefined;
+  Webview: undefined;
+  Map: undefined;
+  Voice: undefined;
+  CustomHooks: undefined;
+  Animation: AnimationStackParamList;
+  Storybook: undefined;
+};
+
+const RootStack = createStackNavigator<RootStackParamList>();
 
 const Router: React.SFC = () => {
   return (
-    <Stack.Navigator initialRouteName="Home">
-      <Stack.Screen name="Home" component={Home} />
-      <Stack.Screen name="DeviceInfo" component={DeviceInfo} />
-      <Stack.Screen name="Hooks" component={Hooks} />
-      <Stack.Screen name="Storage" component={Storage} />
-      <Stack.Screen name="Webview" component={Webview} />
-      <Stack.Screen name="Map" component={Maps} />
-      <Stack.Screen name="Voice" component={Voice} />
-      <Stack.Screen name="CustomHooks" component={CustomHooks} />
-      <Stack.Screen name="Animation" component={AnimationStack} />
-      <Stack.Screen name="Storybook" component={Storybook} />
-    </Stack.Navigator>
+    <RootStack.Navigator initialRouteName="Home">
+      <RootStack.Screen name="Home" component={Home} />
+      <RootStack.Screen name="DeviceInfo" component={DeviceInfo} />
+      <RootStack.Screen name="Hooks" component={Hooks} />
+      <RootStack.Screen name="Storage" component={Storage} />
+      <RootStack.Screen name="Webview" component={Webview} />
+      <RootStack.Screen name="Map" component={Maps} />
+      <RootStack.Screen name="Voice" component={Voice} />
+      <RootStack.Screen name="CustomHooks" component={CustomHooks} />
+      <RootStack.Screen name="Animation" component={AnimationStack} />
+      <RootStack.Screen name="Storybook" component={Storybook} />
+    </RootStack.Navigator>
   );
 };
 export default Router;

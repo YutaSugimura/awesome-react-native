@@ -1,42 +1,43 @@
-## デバイス情報
+# Awesome React Native Sandbox.
 
-#### react-native-device-info
+## Setup
 
-https://github.com/react-native-community/react-native-device-info
+```zsh
+	yarn install
+	cd ios && pod install
+	cd ..
+	yarn ios  # or android
+```
+
+## Packages
+
+## device-info
+
+- [react-native-device-info](https://github.com/react-native-community/react-native-device-info)
 
 ## Hooks
 
-#### react-native-community/hooks
-
-https://github.com/react-native-community/hooks
+- [react-native-community](https://github.com/react-native-community/hooks)
 
 ## Storage
 
-#### react-native-community/async-storage
-
-https://github.com/react-native-community/async-storage
+- [react-native-community/async-storage](https://github.com/react-native-community/async-storage)
 
 ## Webview
 
-### ブラウザー
-
-#### react-native-webview
-
-https://github.com/react-native-community/react-native-webview
+- [react-native-webview](https://github.com/react-native-community/react-native-webview)
 
 ## Maps
 
-### 位置情報取得
+### Geolocation
 
-#### react-native-geolocation
+- [react-native-geolocation](https://github.com/react-native-community/react-native-geolocation)
 
-https://github.com/react-native-community/react-native-geolocation
-
-ios
-
-info.plist
+#### ios
 
 ```
+	# info.plist
+
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
 	<string></string>
 	<key>NSLocationAlwaysUsageDescription</key>
@@ -47,29 +48,25 @@ info.plist
 
 xcode > signing&Capabilities > Background Modes
 
-```
-check Location updates
-```
+- [x]Location updates
 
-android
-
-android/app/src/main/AndroidManifest.xml
+#### android
 
 ```
+	# android/app/src/main/AndroidManifest.xml
+
   <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 ```
 
-### マップ
+### Maps
 
-#### react-native-maps
+- [react-native-maps](https://github.com/react-native-community/react-native-maps)
 
-https://github.com/react-native-community/react-native-maps
-
-android
-
-android/app/src/main/AndroidManifest.xml
+#### android
 
 ```
+	# android/app/src/main/AndroidManifest.xml
+
   <application>
    <!-- You will only need to add this meta-data tag, but make sure it's a child of application -->
    <meta-data
@@ -83,9 +80,7 @@ android/app/src/main/AndroidManifest.xml
 
 ## Routing and Navigation
 
-#### react-navigation
-
-https://reactnavigation.org/
+- [react-navigation](https://reactnavigation.org/)
 
 ```zsh
 	yarn add react-native-reanimated react-native-gesture-handler react-native-screens react-native-safe-area-context @react-native-community/masked-view
@@ -100,29 +95,20 @@ https://reactnavigation.org/
 	yarn add @react-navigation/bottom-tabs
 ```
 
-## Styling
+## UI
 
-### スタイルコンポーネント
-
-#### react-native-elements
-
-https://react-native-elements.github.io/react-native-elements/
-
-#### react-native-side-menu
-
-https://github.com/react-native-community/react-native-side-menu
+- [react-native-elements](https://react-native-elements.github.io/react-native-elements/)
+- [react-native-side-menu](https://github.com/react-native-community/react-native-side-menu)
 
 ### Icon
 
-#### react-native-vector-icons
+- [react-native-vector-icons](https://github.com/oblador/react-native-vector-icons)
 
-https://github.com/oblador/react-native-vector-icons
-
-ios
-
-info.plist
+#### ios
 
 ```
+	# info.plist
+
   <key>UIAppFonts</key>
 	<array>
 		<string>AntDesign.ttf</string>
@@ -143,10 +129,14 @@ info.plist
 	</array>
 ```
 
-android
-
-android/app/build.gradle
+#### android
 
 ```
+	# android/app/build.gradle
+
   apply from: "../../node_modules/react-native-vector-icons/fonts.gradle"
 ```
+
+### Storybook
+
+- [storybook](https://storybook.js.org/docs/guides/guide-react-native/)

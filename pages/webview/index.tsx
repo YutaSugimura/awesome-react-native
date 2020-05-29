@@ -1,7 +1,7 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { SafeAreaView, StyleSheet, StatusBar } from 'react-native';
 import Webview from './webview';
-import { ThemeContext } from '../../utils/Appearance';
+import { useAppearance } from '../../context/Appearance';
 
 const styles = StyleSheet.create({
   container: {
@@ -10,7 +10,7 @@ const styles = StyleSheet.create({
 });
 
 const Page: React.FC = () => {
-  const appearance = useContext(ThemeContext);
+  const appearance = useAppearance();
   const barStyle = appearance === 'light' ? 'dark-content' : 'light-content';
 
   const { container } = styles;

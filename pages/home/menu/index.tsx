@@ -1,42 +1,64 @@
 import React from 'react';
-import { StyleSheet, ScrollView, Text } from 'react-native';
+import { StyleSheet, ScrollView, Text, ColorSchemeName } from 'react-native';
 import { Button } from 'react-native-elements';
+import { ParamName } from '../../../navigation';
+import { useAppearance } from '../../../context/Appearance';
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    padding: 18,
-  },
-  button: {
-    paddingTop: 6,
-    paddingBottom: 6,
-  },
-});
+const Styles = (theme: ColorSchemeName) =>
+  StyleSheet.create({
+    container: {
+      flex: 1,
+      backgroundColor: theme === 'dark' ? '#424242' : '#fff',
+      padding: 18,
+    },
+    title: {
+      fontSize: 24,
+      fontWeight: 'bold',
+      color: theme === 'dark' ? '#fff' : 'rgba(0, 0, 0, 0.87)',
+      textAlign: 'center',
+      paddingBottom: 12,
+    },
+    buttonContainer: {
+      paddingTop: 3,
+      paddingBottom: 3,
+    },
+    buttonTitle: {
+      color: theme === 'dark' ? '#fff' : '#0069c0',
+    },
+  });
 
 interface Props {
-  navi: (path: string) => () => void;
+  navi: (path: ParamName) => () => void;
 }
 
 const Components: React.FC<Props> = ({ navi }) => {
+  const appearance = useAppearance();
+  const lists: ParamName[] = [
+    'DeviceInfo',
+    'Hooks',
+    'Storage',
+    'Webview',
+    'Map',
+    'Voice',
+    'CustomHooks',
+    'Animation',
+    'Storybook',
+  ];
+  const styles = Styles(appearance);
   return (
     <ScrollView scrollsToTop={false} style={styles.container}>
-      <Text>Menu</Text>
+      <Text style={styles.title}>Menu</Text>
 
-      <Button title="deviceInfo" onPress={navi('DeviceInfo')} type="clear" style={styles.button} />
-      <Button title="hooks" onPress={navi('Hooks')} type="clear" style={styles.button} />
-      <Button title="Storage" onPress={navi('Storage')} type="clear" style={styles.button} />
-      <Button title="webview" onPress={navi('Webview')} type="clear" style={styles.button} />
-      <Button title="Map" onPress={navi('Map')} type="clear" style={styles.button} />
-      <Button title="Voice" onPress={navi('Voice')} type="clear" style={styles.button} />
-      <Button
-        title="CustomHooks"
-        onPress={navi('CustomHooks')}
-        type="clear"
-        style={styles.button}
-      />
-      <Button title="Animation" onPress={navi('Animation')} type="clear" style={styles.button} />
-      <Button title="Storybook" onPress={navi('Storybook')} type="clear" style={styles.button} />
+      {lists.map((screenName, index) => (
+        <Button
+          key={index}
+          title={screenName}
+          onPress={navi(screenName)}
+          type="clear"
+          containerStyle={styles.buttonContainer}
+          titleStyle={styles.buttonTitle}
+        />
+      ))}
     </ScrollView>
   );
 };

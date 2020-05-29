@@ -1,7 +1,7 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useState, useEffect } from 'react';
 import { SafeAreaView, Text, Button, StyleSheet } from 'react-native';
 import AsyncStorage from '@react-native-community/async-storage';
-import { ThemeContext } from '../../utils/Appearance';
+import { useAppearance } from '../../context/Appearance';
 
 const styles = StyleSheet.create({
   container: {
@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
 });
 
 const Page: React.FC = () => {
-  const appearance = useContext(ThemeContext);
+  const appearance = useAppearance();
   const [state, setState] = useState<string>('empty');
   const key = '@storage_Key';
 

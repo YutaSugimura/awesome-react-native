@@ -10,26 +10,30 @@ type TabBarStackParamList = {
   AnimationHome: undefined;
 };
 
-type RootStackParamList = {
+export type AnimationStackParamList = {
   AnimationTabBar: TabBarStackParamList;
   AnimationModal: undefined;
 };
 
 const TabBarStack = createBottomTabNavigator<TabBarStackParamList>();
-const RootStack = createStackNavigator<RootStackParamList>();
+const AnimationStack = createStackNavigator<AnimationStackParamList>();
 
 const TabBarStackScreen: React.SFC = () => (
-  <TabBarStack.Navigator tabBar={(props) => <TabBar {...props} />}>
+  <TabBarStack.Navigator tabBar={(props): React.ReactNode => <TabBar {...props} />}>
     <TabBarStack.Screen name="AnimationHome" component={HomeScreen} />
   </TabBarStack.Navigator>
 );
 
 const Stack: React.SFC = () => {
   return (
-    <RootStack.Navigator headerMode="none" mode="modal" screenOptions={{ ...opacityTransition }}>
-      <RootStack.Screen name="AnimationTabBar" component={TabBarStackScreen} />
-      <RootStack.Screen name="AnimationModal" component={ModalScreen} />
-    </RootStack.Navigator>
+    <AnimationStack.Navigator
+      headerMode="none"
+      mode="modal"
+      screenOptions={{ ...opacityTransition }}
+    >
+      <AnimationStack.Screen name="AnimationTabBar" component={TabBarStackScreen} />
+      <AnimationStack.Screen name="AnimationModal" component={ModalScreen} />
+    </AnimationStack.Navigator>
   );
 };
 export default Stack;
