@@ -7,6 +7,7 @@ import Storage from '../pages/storage';
 import Webview from '../pages/webview';
 import Maps from '../pages/map';
 import Voice from '../pages/voice';
+import VoiceRecord from '../pages/voiceRecord';
 import CustomHooks from '../pages/customHooks';
 import AnimationStack, { AnimationStackParamList } from '../navigation/animation';
 import Storybook from '../pages/storybook';
@@ -19,6 +20,7 @@ export type ParamName =
   | 'Webview'
   | 'Map'
   | 'Voice'
+  | 'VoiceRecord'
   | 'CustomHooks'
   | 'Animation'
   | 'Storybook';
@@ -31,6 +33,7 @@ export type RootStackParamList = {
   Webview: undefined;
   Map: undefined;
   Voice: undefined;
+  VoiceRecord: undefined;
   CustomHooks: undefined;
   Animation: AnimationStackParamList;
   Storybook: undefined;
@@ -48,6 +51,7 @@ const Router: React.SFC = () => {
       <RootStack.Screen name="Webview" component={Webview} />
       <RootStack.Screen name="Map" component={Maps} />
       <RootStack.Screen name="Voice" component={Voice} />
+      <RootStack.Screen name="VoiceRecord" component={VoiceRecord} />
       <RootStack.Screen name="CustomHooks" component={CustomHooks} />
       <RootStack.Screen name="Animation" component={AnimationStack} />
       <RootStack.Screen name="Storybook" component={Storybook} />

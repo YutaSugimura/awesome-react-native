@@ -40,6 +40,7 @@ const Components: React.FC<Props> = ({ navi }) => {
     'Webview',
     'Map',
     'Voice',
+    'VoiceRecord',
     'CustomHooks',
     'Animation',
     'Storybook',

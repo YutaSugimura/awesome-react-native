@@ -78,6 +78,37 @@ xcode > signing&Capabilities > Background Modes
   </application>
 ```
 
+## voice
+
+### react-native-community/voice
+
+- [setup](https://github.com/react-native-community/voice)
+
+### react-native-audio-toolkit
+
+- [setup](https://github.com/react-native-community/react-native-audio-toolkit/blob/master/docs/SETUP.md)
+
+#### android
+
+```
+	# android/app/src/main/AndroidManifest.xml
+	<!-- If you want to play audio from a SD card (i.e. external storage),
+    you need to add this permission -->
+  <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+  <!-- If you want to play audio from a URL, you need to add these permissions -->
+  <uses-permission android:name="android.permission.INTERNET" />
+  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+  <!-- If you want to record audio, you need to add this permission -->
+  <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+  <!-- If you want to record audio to a SD card (i.e. external storage),
+    you need to add this permission -->
+  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+```
+
 ## Routing and Navigation
 
 - [react-navigation](https://reactnavigation.org/)
