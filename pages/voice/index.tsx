@@ -139,7 +139,7 @@ class Page extends Component<Props, State> {
     });
 
     try {
-      await Voice.start('en-US');
+      await Voice.start('ja-JP');
     } catch (e) {
       console.error(e);
     }
