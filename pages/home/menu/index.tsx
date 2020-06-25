@@ -43,6 +43,7 @@ const Components: React.FC<Props> = ({ navi }) => {
     'VoiceRecord',
     'CustomHooks',
     'Animation',
+    'Draggable',
     'Storybook',
   ];
   const styles = Styles(appearance);

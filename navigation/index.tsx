@@ -10,6 +10,7 @@ import Voice from '../pages/voice';
 import VoiceRecord from '../pages/voiceRecord';
 import CustomHooks from '../pages/customHooks';
 import AnimationStack, { AnimationStackParamList } from '../navigation/animation';
+import Draggable from '../pages/draggable';
 import Storybook from '../pages/storybook';
 
 export type ParamName =
@@ -23,6 +24,7 @@ export type ParamName =
   | 'VoiceRecord'
   | 'CustomHooks'
   | 'Animation'
+  | 'Draggable'
   | 'Storybook';
 
 export type RootStackParamList = {
@@ -36,6 +38,7 @@ export type RootStackParamList = {
   VoiceRecord: undefined;
   CustomHooks: undefined;
   Animation: AnimationStackParamList;
+  Draggable: undefined;
   Storybook: undefined;
 };
 
@@ -54,6 +57,7 @@ const Router: React.SFC = () => {
       <RootStack.Screen name="VoiceRecord" component={VoiceRecord} />
       <RootStack.Screen name="CustomHooks" component={CustomHooks} />
       <RootStack.Screen name="Animation" component={AnimationStack} />
+      <RootStack.Screen name="Draggable" component={Draggable} />
       <RootStack.Screen name="Storybook" component={Storybook} />
     </RootStack.Navigator>
   );
