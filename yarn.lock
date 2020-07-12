@@ -6552,7 +6552,7 @@ react-native-device-info@^5.6.2:
   resolved "https://registry.yarnpkg.com/react-native-device-info/-/react-native-device-info-5.6.2.tgz#194c055355f1dd3121ab682b00598086cf4beb32"
   integrity sha512-c+bVrvbQIlUlUHpIiggjhCUnqTga7sK0+G1RhRN25ct3kQvDkj3TKv0GGsqTJxIqNBfzg2Hh5ulMkrU0ddeu/Q==
 
-react-native-elements@^2.0.2:
+react-native-elements@^2.0.4:
   version "2.0.4"
   resolved "https://registry.yarnpkg.com/react-native-elements/-/react-native-elements-2.0.4.tgz#ea5a6bb34cabd48dcd6c6546e4737d2075e40ee3"
   integrity sha512-nIFz47Sk/urOxZX+sqgWF2k7IVL0t9NGsVLg4HC7pN70bsjXMr4VUmS72zioxag3Du8xK1g7lw4vrRX3JQeVYg==
