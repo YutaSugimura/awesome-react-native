@@ -240,7 +240,7 @@ PODS:
     - React
   - react-native-maps (0.27.1):
     - React
-  - react-native-safe-area-context (3.0.7):
+  - react-native-safe-area-context (3.1.1):
     - React
   - react-native-slider (3.0.0):
     - React
@@ -517,7 +517,7 @@ SPEC CHECKSUMS:
   React-jsinspector: fc661eff8edbfb7e22119382c13f33bcadde0f3c
   react-native-geolocation: c956aeb136625c23e0dce0467664af2c437888c9
   react-native-maps: f4b89da81626ad7f151a8bfcb79733295d31ce5c
-  react-native-safe-area-context: ef6f16c66b0797ecae1bf86c103dfb3dc16fc33d
+  react-native-safe-area-context: 344b969c45af3d8464d36e8dea264942992ef033
   react-native-slider: 12bd76d3d568c9c5500825db54123d44b48e4ad4
   react-native-voice: d531fcae8320dc9dedb858bf2f8179c2798c4e30
   react-native-webview: 679b6f400176e2ea8a785acf7ae16cf282e7d1eb
